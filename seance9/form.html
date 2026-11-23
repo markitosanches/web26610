@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <style>
+        body{
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+        input:not([type="checkbox"], [type="radio"]), select, textarea{
+            display:block;
+            margin:5px;
+            width: 300px;
+            padding: 8px;
+            border-radius: 2px;
+            border: 2px solid grey
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulaire</h1>
+    </header>
+    <main>
+        <form action="form.html" method="get">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="écrire votre nom" minlength="2" maxlength="10">
+            <label for="adresse">Adresse</label>
+            <input type="text"  id="adresse" name="adresse" value="Maisonneuve">
+            <label for="courriel">Courriel</label>
+            <input type="email"  id="courriel" name="courriel" required>
+            <label for="pwd">Password</label>
+            <input type="password" name="password" id="pwd" >
+            <label for="dob">Naissance</label>
+            <input type="date"  id="dob" name="naissance">
+            <label for="age">Age</label>
+            <input type="number"  id="age"  min="0" max="150" name="age">
+            <label for="poid">Poid en kilo</label>
+            <input type="number"  id="poid" step="0.01" name="poid">
+            <label for="salary">Salaire</label>
+            <input type="range" id="salary" min="18" max="50" name="salaire">
+            <label for="up">Upload</label>
+            <input type="file" id="up" name="file">
+            <fieldset>
+                <legend>Programmation</legend>
+                <label>HTML
+                    <input type="checkbox" name="html" checked>
+                </label>
+                <label>CSS
+                    <input type="checkbox" name="css" checked>
+                </label>
+                <label>PHP
+                    <input type="checkbox" name="php">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>il fait froid</legend>
+                <label>Oui
+                    <input type="radio" name="froid" value="oui">
+                </label>
+                <label>Non
+                    <input type="radio" name="froid" value="non">
+                </label>
+                <label>Je ne sais pas
+                    <input type="radio" name="froid" value="je ne sais pas" checked>
+                </label>
+            </fieldset>
+           
+            <label for="city">Ville</label>
+            <select id="city" name="ville">
+                <option value=""></option>
+                <option value="3">Laval</option>
+                <option value="1">Montreal</option>
+                <option value="2" selected>Quebec</option>
+                
+            </select>
+            <label for="color">Colors</label>
+            <select id="color" multiple name="color_plus">
+                <option value="r">Red</option>
+                <option value="b">Blue</option>
+                <option value="g">green</option>
+            </select>
+            <label for="color2">Colors Group</label>
+            <select id="color2" name="color_group">
+                <optgroup label="Primary colors">
+                    <option value="r">Red</option>
+                    <option value="b">Blue</option>
+                    <option value="g">green</option>
+                </optgroup>
+                <optgroup label="Secondary colors">
+                    <option value="y">Yellow</option>
+                    <option value="o">Orange</option>
+                    <option value="p">Purple</option>
+                </optgroup>
+            </select>
+            <label for="comments">Commentaire</label>
+            <textarea id="comments" rows="10" cols="60" name="commentaire">ABC </textarea>
+
+            <!-- <button type="submit">Send</button> -->
+            <input type="submit" value="Send">
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+    <footer>
+        Tous les droits....
+    </footer>
+</body>
+</html>
+
+
+<!--
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=Peter
+ 
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=&courriel=&naissance=&age=&poid=&salaire=34&file=&ville=&ville_group=r&commentaire=
+
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=&courriel=&naissance=&age=&poid=&salaire=34&file=&html=on&froid=on&ville=&ville_group=r&commentaire=
+
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=&courriel=&naissance=&age=&poid=&salaire=34&file=&froid=on&ville=&ville_group=r&commentaire=
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=&courriel=&naissance=&age=&poid=&salaire=34&file=&froid=oui&ville=&ville_group=r&commentaire=
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=&courriel=&naissance=&age=&poid=&salaire=34&file=&froid=je+ne+sais+pas&ville=&ville_group=r&commentaire=
+
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=&courriel=&naissance=&age=&poid=&salaire=34&file=&ville=1&color_plus=r&color_plus=g&color_group=o&commentaire=
+
+
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=Peter&adresse=Maisonneuve&courriel=peter%40gmai.com&naissance=2010-10-10&age=10&poid=60.5&salaire=23&file=index.html&html=on&php=on&froid=non&ville=2&color_plus=r&color_group=p&commentaire=this+is+a+comment
+
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=&courriel=&password=123456&naissance=&age=&poid=&salaire=34&file=&ville=&color_group=r&commentaire=
+
+
+file:///C:/Marcos/web26610/seance9/form.html?nom=&adresse=Maisonneuve&courriel=&password=&naissance=&age=&poid=&salaire=34&file=&html=on&css=on&froid=je+ne+sais+pas&ville=2&color_group=r&commentaire=ABC+
+
+
+
+
+-->
