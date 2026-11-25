@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecteur et Combinteur</title>
+    <style>
+        /* h1{
+            color: red;
+        }
+        h2{
+            color: red;
+        }
+        h3{
+            color: red;
+        } */
+        h1, h2, h3, .text-red{
+            color: red;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            /* color: blue; */
+        }
+        nav{
+            background-color: bisque;
+        }
+        nav a{
+            text-decoration: none;
+            color: brown
+        }
+        nav > a{
+            text-transform: uppercase;
+        }
+        nav div a{
+            color: rgb(233, 37, 197)
+        }
+
+        a.active{
+            color: green;
+        }
+        .active{
+            color: yellow
+        }
+        .adjacent li:first-child + li{
+            background-color: red;
+        }
+
+        .general li:nth-child(3) ~ li{
+            background-color: pink;
+        }
+       
+
+        /* .menu{
+
+        } */
+
+    </style>
+</head>
+<body>
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h3>H3</h3>
+    <h4>H4</h4>
+    <span class="text-red">Span test color</span>
+    <nav>
+       <a href="#">Page 1</a>
+       <a href="#">Page 2</a>
+       <a href="#" class="active">Page 3</a>
+       <div>
+            <a href="">Page 3.1</a>
+       </div>
+       <a href="#">Page 4</a>
+    </nav>
+    <main>
+        <p class="active">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis nam ab, enim totam rerum rem? Atque, distinctio sequi, quod incidunt, consequuntur repudiandae rerum esse nostrum tempore illo fugit? Maiores, saepe.</p>
+        <a href="#">Visiter google</a>
+        <section>
+            <h3>Sélecteur le frère adjacent</h3>
+            <ul class="adjacent">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Sélecteur les frères Generaux</h3>
+            <ul class="general">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+                <li>Item 4</li>
+                <li>Item 5</li>
+            </ul>
+        </section>
+    </main>
+    
+</body>
+</html>

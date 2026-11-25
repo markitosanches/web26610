@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo class</title>
+    <style>
+        body{
+            margin:0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        nav{
+            background-color: antiquewhite;
+            padding: 20px;
+        }
+        nav a{
+            padding: 20px;
+            text-decoration: none;
+            color: darkgoldenrod;
+        }
+        nav a:hover{
+            color: antiquewhite;
+            background-color: darkgoldenrod;
+
+        }
+        a:visited{
+            color: red;
+        }
+         a:active{
+            background-color: grey;
+        }
+
+        div{
+            p:first-child{
+                background:pink;
+            }
+        }
+
+        
+        div{
+            p:last-child{
+                background:yellow;
+            }
+        }
+
+        /* li:nth-of-type(2){
+            color: violet;
+        } */
+         /* li:nth-of-type(2n){
+            color: red;
+        }
+         */
+         li:nth-of-type(even){
+            color: blue
+         }
+
+         input:focus{
+            box-shadow: 0 0 10px blue;
+         }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Page 1</a>
+        <a href="#">Page 2</a>
+        <a href="#">Page 3</a>
+    </nav>
+    <a href="a.html"> test a</a>
+    <a href="b.hmlt">test b </a>
+    <div>
+        <p>Lorem 1 (first)</p>
+        <p>Lorem 2</p>
+        <section>Lorem 3</section>
+        <p>Lorem 4
+            <div>
+                <p>Lorem 4.1 (first)</p>
+                <p>Lorem 4.2</p>
+                <p>Lorem 4.3 (last)</p>
+            </div>
+        </p>
+        <p>Lorem 5 (last)</p>
+    </div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+    <label for="nom">name</label>
+    <input type="text" id="nom">
+</body>
+</html>
